@@ -1,9 +1,29 @@
-let num = 266219; 
-let numToStr = num.toString(); // преобразовали число в строку
-let numSplit = numToStr.split(''); // разбили строку на массив
-const reducer = (accumulator, currentValue) => accumulator * currentValue; // применили функцию reducer
-let result = numSplit.reduce(reducer)
-result **= 3;
-console.log(result);
-let resToStr = result.toString();
-alert(resToStr.substr(0,2));
+  let lang = 'ru';
+  if (lang == 'ru') {
+  console.log('пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс');
+}
+else if (lang == 'en') {
+	console.log('mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn');
+} 
+
+switch (lang) {
+case 'ru':
+  console.log('пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс');
+  break;
+case 'en':
+  console.log('mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn');
+  break;
+}
+
+let matrix = {
+	'ru':['пн', 'вт', 'ср','чт', 'пт', 'сб', 'вс'],
+	'en':['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
+};
+console.log(matrix[lang]);
+
+let namePerson = prompt('Как тебя зовут?');
+name = (namePerson == 'Артём') ? 'директор' : 
+name = (namePerson == 'Максим')? 'преподаватель' : 
+'студент' ;
+console.log(name);
+
