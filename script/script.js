@@ -1,6 +1,8 @@
 let num = 266219; 
-let numStr = num.toString(); 
-console.log(numStr[0] * numStr[1] * numStr[2] * numStr[3] * numStr[4] * numStr[5]); 
+let numToStr = num.toString(); // преобразовали число в строку
+let numSplit = numToStr.split(''); // разбили строку на массив
+const reducer = (accumulator, currentValue) => accumulator * currentValue; // применили функцию reducer
+console.log(numSplit.reduce(reducer));
 let result = 1296;
 result **= 3;
 console.log(result);
